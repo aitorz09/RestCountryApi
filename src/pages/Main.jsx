@@ -8,36 +8,36 @@ export const Main = () => {
     const [searchResults, setSearchResults] = useState(null)
     const [searchTerms, setSearchTerms] = useState('')
     const [filteredRegion, setFilteredRegion] = useState('')
+
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const url = 'https://restcountries.com/v3.1/all'
                 const response = await fetch(url)
                 const data = await response.json()
-    
+
                 let filteredData = data
-    
+
                 if (searchTerms.trim()) {
-                    filteredData = filteredData.filter(elem => elem.name.common === searchTerms.trim())
+                    const searchTermLowerCase = searchTerms.trim().toLowerCase(); // Convertir la búsqueda a minúsculas
+                    filteredData = filteredData.filter(elem => elem.name.common.toLowerCase().includes(searchTermLowerCase));
                 }
-    
+
                 if (filteredRegion && filteredRegion !== 'All') {
                     filteredData = filteredData.filter(elem => elem.region === filteredRegion)
                 }
-    
+
                 setSearchResults(filteredData)
             } catch (error) {
                 console.error('Error en el fetching de datos', error)
             }
         }
-    
+
         fetchData()
     }, [searchTerms, filteredRegion]) // Asegúrate de incluir filteredRegion en las dependencias del efecto
-    
-    
 
     const handleSearch = (searchTerms) => {
-        setSearchTerms(searchTerms) // Restablecer el filtro de región cuando se realiza una búsqueda
+        setSearchTerms(searchTerms.toLowerCase()); // Convertir la búsqueda a minúsculas antes de establecerla
     }
 
     const handleRegionChange = (region) => {
@@ -53,3 +53,4 @@ export const Main = () => {
         </>
     )
 }
+
