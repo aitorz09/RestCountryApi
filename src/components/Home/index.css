@@ -1,0 +1,43 @@
+.country-homepage-main{
+width: 100vw;
+display: flex;
+flex-direction: column;
+gap: 1rem;
+margin:auto;
+place-items: center;
+}
+.country-homepage-img{
+    width: 375px;
+    transition: transform 100ms ease-in;
+    border-radius: 10px;
+}
+.country-homepage-img:hover{
+    transform: scale(1.5);
+    box-shadow: 
+    0 0 10px -5px black;
+}
+.country-homepage-h1{
+    color: var(--very-dark-blue-text);
+
+}
+.country-homepage-wrap{
+    display: flex;
+    height: 100vh;
+
+}
+.country-homepage-link{
+    color: var(--very-dark-blue-text);
+    font-weight: 700;
+    transition: all 100ms ease-out;
+    padding: .2rem;
+    width: 80px;
+    background-color: white;
+    box-shadow: 
+    0 0 1px 1px black;
+    
+}
+.country-homepage-link:hover{
+    box-shadow: 
+    0 0 3px 2px var(--very-dark-blue-text);
+    color: var(--dark-blue);
+}

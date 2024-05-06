@@ -1,0 +1,27 @@
+.country-form{
+    position: relative;
+    width: 375px;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+.country-form-search{
+    width: 70%;
+    padding: .5rem;
+    border-radius: 10px;
+   
+}
+.country-form-btn{
+    padding: 0rem;
+    background:none;
+    position: absolute;
+    top: 50%;
+    right:80px; /* Ajusta la posición del botón dentro del input */
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.country-form-btn:hover{
+   appearance: none;
+}
+.country-form-btn:active{
+   appearance: none;
+}
