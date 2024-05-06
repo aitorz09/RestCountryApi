@@ -10,9 +10,9 @@ function App() {
   return (
     <>
     <Routes>
-      <Route path='/RestCountryApi' element={<Home/>}/>
-      <Route path='/RestCountryApi/countrys' element={<Main/>}/>
-      <Route path='/RestCountryApi/countrys/:ccn3' element={<Country/>}/>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/countrys' element={<Main/>}/>
+      <Route path='/countrys/:ccn3' element={<Country/>}/>
     </Routes>
     </>
   )

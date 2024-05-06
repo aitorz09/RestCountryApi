@@ -7,7 +7,7 @@ export const Country = ({country}) => {
         country.map((elem,index)=>{
      return  <li className='country-wrap-li' key={index}>
             <article className='country-article'>
-             <a href={`/countrys/${elem.ccn3}`}>
+             <a href={`/RestCountryApi/countrys/${elem.ccn3}`}>
                 <img className='country-img' src={elem.flags.png} alt={elem.name} />
              </a>
                 <h2 className='country-h2'>{elem.name.common}</h2>

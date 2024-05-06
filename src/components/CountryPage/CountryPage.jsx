@@ -36,7 +36,7 @@ export const CountryPage = () => {
         <>
             <Header />
             <main className="country-page-main">
-                <Link className="country-page-link" to={"/RestCountryApi/countrys"}>Go Back</Link>
+                <Link className="country-page-link" to={"/countrys"}>Go Back</Link>
                 <section className="country-img-wrap">
                     <img className="country-page-flag" src={Country.flags.png} alt="" />
                 </section>
