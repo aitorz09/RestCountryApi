@@ -12,7 +12,7 @@ function App() {
     <Routes>
       <Route path='/RestCountryApi' element={<Home/>}/>
       <Route path='/RestCountryApi/countrys' element={<Main/>}/>
-      <Route path='/RestCountryApi/country/:ccn3' element={<Country/>}/>
+      <Route path='/RestCountryApi/countrys/:ccn3' element={<Country/>}/>
     </Routes>
     </>
   )
