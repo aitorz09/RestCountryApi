@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom'
 import './index.css'
+
 export const Country = ({country}) => {
     if(country.length === 0){
         return <p>Not Found</p>
@@ -7,9 +9,9 @@ export const Country = ({country}) => {
         country.map((elem,index)=>{
      return  <li className='country-wrap-li' key={index}>
             <article className='country-article'>
-             <a href={`/RestCountryApi/countrys/${elem.ccn3}`}>
+             <Link href={`/countrys/${elem.ccn3}`}>
                 <img className='country-img' src={elem.flags.png} alt={elem.name} />
-             </a>
+             </Link>
                 <h2 className='country-h2'>{elem.name.common}</h2>
                 <div className='country-info'> 
                     <p className='country-p'>Population: <span>{elem.population}</span></p>
