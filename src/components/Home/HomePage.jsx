@@ -7,7 +7,7 @@ export const HomePage = () => {
       <main className='country-homepage-main'>
           <h1 className='country-homepage-h1'>Welcome, to <span>Look for a Country!</span></h1>
           <img className='country-homepage-img' src={Countrys} alt="Imagen de los continentes y sus paises." />
-          <Link className='country-homepage-link' to={'/countrys'}>Go to Countrys</Link>
+          <Link className='country-homepage-link' to={'/RestCountryApi/countrys'}>Go to Countrys</Link>
           <hr />
       </main>
     </div>
