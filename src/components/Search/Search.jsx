@@ -16,7 +16,7 @@ export const Search = ({onSearch}) => {
   }
   return (
     <form className="country-form" action="submit" onSubmit={handleForm}>
-        <input className="country-form-search" onChange={handleChange} type="search" id="search" name="search"/>
+        <input className="country-form-search" onChange={handleChange} type="search" id="search" name="search" placeholder="Spain,Afghanistan,Canada,United States..."/>
         <button className="country-form-btn" onClick={handleSubmit}>🔎</button>
     </form>
   )
